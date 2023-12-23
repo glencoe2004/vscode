@@ -174,10 +174,10 @@ const enum StringOffsetValidationType {
 
 export class TextModel extends Disposable implements model.ITextModel, IDecorationsTreesHost {
 
-	static _MODEL_SYNC_LIMIT = 50 * 1024 * 1024; // 50 MB,  // used in tests
-	private static readonly LARGE_FILE_SIZE_THRESHOLD = 20 * 1024 * 1024; // 20 MB;
-	private static readonly LARGE_FILE_LINE_COUNT_THRESHOLD = 300 * 1000; // 300K lines
-	private static readonly LARGE_FILE_HEAP_OPERATION_THRESHOLD = 256 * 1024 * 1024; // 256M characters, usually ~> 512MB memory usage
+	static _MODEL_SYNC_LIMIT = 50 * 1024 * 1024 * 1024; // 50 GB,  // used in tests
+	private static readonly LARGE_FILE_SIZE_THRESHOLD = 20 * 1024 * 1024 * 1024; // 20 GB;
+	private static readonly LARGE_FILE_LINE_COUNT_THRESHOLD = 300 * 1000 * 1000; // 3M lines
+	private static readonly LARGE_FILE_HEAP_OPERATION_THRESHOLD = 256 * 1024 * 1024 * 1024; // 2560M characters, usually ~> 5.12GB memory usage
 
 	public static DEFAULT_CREATION_OPTIONS: model.ITextModelCreationOptions = {
 		isForSimpleWidget: false,
